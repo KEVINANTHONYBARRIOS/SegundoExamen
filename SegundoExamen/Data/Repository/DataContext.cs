@@ -9,6 +9,8 @@ namespace SegundoExamen.Data
     public class DataContext
     {
         internal object products;
+        internal object pantas;
+        internal object Database;
 
         public DataContext(dbcontext option)
         {
@@ -16,12 +18,12 @@ namespace SegundoExamen.Data
            public DbSet<Name> Name { get; set; }
         public DbSet<type> type { get; set; }
         public DbSet<years> years { get; set; }
-        public DbSet<cost> cost { get; set; }
-        public object DataContext { get; internal set; }
+      
+       
 
         public DataContext(object dataContext)
         {
-            DataContext = dataContext;
+          
         }
 
         internal Task saveChangesAsync()

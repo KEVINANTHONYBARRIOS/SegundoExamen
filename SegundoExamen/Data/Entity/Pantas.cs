@@ -15,10 +15,11 @@ namespace SegundoExamen.Data.Entity
 
         [Display(Name = "Años de la planta")]
         [MaxLength(8, ErrorMessage = "En el campo {0} el maximo permitido son de 8   caracteres}")]
-        public DateTime years { get; set; } 
+        public DateTime years { get; set; }
 
         [Display(Name = "Costo de la planta")]
-         public decimal cost { get; set; } 
+       
+        public decimal cost { get; set; } = null!;
 
         [Display(Name = "Fecha de plantación")]
          public DateTime Date { get; set; } 

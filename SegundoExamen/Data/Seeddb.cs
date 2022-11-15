@@ -7,18 +7,17 @@
         public Seeddb(DataContext context)
         {
             this.context = context;
-            this.random = random;
+            this.random = new Random();
         }
         public async Task SeedAsyncn()
         {
-            object = await context.DataContext.EnsureCreatedAsync();
-            if (this.context.products.Any())
+            await this.context.Database.EnsureCreatedAsync();
+            if (this.context.context.Any  ())
             {
                 this.AddProduct("primera planta");
                 this.AddProduct("segunda planta");
                 this.AddProduct("tercera planta");
                 await this.context.saveChangesAsync();
-
             }
         }
         private void AddProduct(string name)
